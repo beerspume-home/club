@@ -1,0 +1,46 @@
+PODS:
+  - BaseLib (1.0.5)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - libqrencode (3.4.2)
+  - MJExtension (2.5.16)
+  - RongCloudIM/IMKit (2.8.12):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.12)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - WebViewJavascriptBridge (4.1.5)
+
+DEPENDENCIES:
+  - BaseLib (from `gitserver:/gitroot/Pods/BaseLib.git`)
+  - FMDB (~> 2.5)
+  - libqrencode (~> 3.4.2)
+  - MJExtension (~> 2.5.16)
+  - RongCloudIM/IMKit (~> 2.8.3)
+  - RongCloudIM/IMLib (~> 2.8.3)
+  - SDWebImage (~> 3.7.3)
+  - WebViewJavascriptBridge (~> 4.1.4)
+
+EXTERNAL SOURCES:
+  BaseLib:
+    :git: gitserver:/gitroot/Pods/BaseLib.git
+
+CHECKOUT OPTIONS:
+  BaseLib:
+    :commit: b051f0f574ca1004f011b61633284d18d2c27c33
+    :git: gitserver:/gitroot/Pods/BaseLib.git
+
+SPEC CHECKSUMS:
+  BaseLib: 109746cc52a99fcc1c4216fd5686cad7163ee428
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
+  MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
+  RongCloudIM: 13599772038afa20dc62aff70c620b9305e6ac96
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  WebViewJavascriptBridge: e7b6669bebfc4f151daa0fdec3c8c24c8dc3a24e
+
+PODFILE CHECKSUM: c9b7ad96db7a3cf546aecd3bda6f6dad594d7359
+
+COCOAPODS: 1.3.0.beta.1

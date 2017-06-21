@@ -1,0 +1,146 @@
+<html>
+<body>
+<br/>
+<input type="button" value="批量创建用户" onclick="createUsersSet()"/>
+<input type="button" value="创建用户" onclick="formUserReg()"/>
+<input type="button" value="忘记密码" onclick="formForgotPassword()"/>
+<br/>
+<br/>
+<span id="l_phone" line="true" style="display:none">手机号: <input type="text" id="phone"/><br/></span>
+<span id="l_smscode" line="true" style="display:none">短信验证码: <input type="text" id="smscode"/><br/></span>
+<span id="l_password" line="true" style="display:none">密码: <input type="text" id="password"/><br/></span>
+<span id="l_name" line="true" style="display:none">姓名: <input type="text" id="name"/><br/></span>
+<span id="l_idcard" line="true" style="display:none">身份证号: <input type="text" id="idcard"/><br/></span>
+<span id="l_gender" line="true" style="display:none">性别: <input type="text" id="gender"/><br/></span>
+
+<span id="l_userReg" line="true" style="display:none"><input type="button" value="提交" onclick="userReg()"/><br/></span>
+<span id="l_forgotPassword" line="true" style="display:none"><input type="button" value="提交" onclick="forgotPassword()"/><br/></span>
+
+<script src="jquery.min.js"></script>
+<script src="data.js"></script>
+<script>
+function getBaseUrl(){
+    return window.location.protocol+"//"+window.location.host+"/";
+}
+
+function doGet(url,callback){
+    console.log(url);
+    $.ajax({
+        type:"GET"
+        ,url: url
+        ,dataType: 'json'
+        ,success: function(data, textStatus){
+            callback(data,textStatus);
+        }
+        ,error: function(data, textStatus){
+            console.log("Error HTTP Response!");
+        }
+        ,async:false
+    });
+}
+
+//注册用户
+function formUserReg(){
+    $("[line]").css("display","none");
+    var showNames=[
+    "phone","smscode","password","name","gender","userReg","idcard"
+    ];
+    for(var i=0;i<showNames.length;i++){
+        $("#l_"+showNames[i]).css("display","block");
+    }
+}
+function userReg(){
+    var baseurl=getBaseUrl();
+    var urltemp_sendSMSCode=baseurl+"app/sendSMSCode?phone=<phone>";
+    var urltemp_userReg=baseurl+"app/userReg?phone=<phone>&name=<name>&smscode=<smscode>&gender=<gender>&password=<password>&idcard=<idcard>"
+
+    var phone=$("#phone").val();
+    var name=$("#name").val();
+    var smscode=$("#smscode").val();
+    var gender=$("#gender").val();
+    var password=$("#password").val();
+    var idcard=$("#idcard").val();
+
+    var url_sendSMSCode=urltemp_sendSMSCode.replace("<phone>",phone);
+    var url_userReg=urltemp_userReg.replace("<phone>",phone).replace("<smscode>",smscode).replace("<gender>",gender).replace("<password>",password).replace("<name>",name).replace("<idcard>",idcard);
+    doGet(url_sendSMSCode,function(result){
+        if(result.code==0){
+            doGet(url_userReg,function(result){
+                if(result.code==0){
+                    console.log("创建用户成功");
+                }else{
+                    console.log("Error when userReg msg="+result.msg);
+                }
+            })
+        }else{
+            console.log("Error when sendSMSCode msg="+result.msg);
+        }
+    });
+}
+
+//忘记密码
+function formForgotPassword(){
+    $("[line]").css("display","none");
+    var showNames=[
+    "phone","smscode","password","forgotPassword"
+    ];
+    for(var i=0;i<showNames.length;i++){
+        $("#l_"+showNames[i]).css("display","block");
+    }
+}
+function forgotPassword(){
+    var baseurl=getBaseUrl();
+    var urltemp_sendSMSCode=baseurl+"app/sendSMSCode?phone=<phone>";
+    var urltemp_resetPassword=baseurl+"app/resetPassword?phone=<phone>&smscode=<smscode>&password=<password>"
+
+    var phone=$("#phone").val();
+    var smscode=$("#smscode").val();
+    var password=$("#password").val();
+
+    var url_sendSMSCode=urltemp_sendSMSCode.replace("<phone>",phone);
+    var url_resetPassword=urltemp_resetPassword.replace("<phone>",phone).replace("<smscode>",smscode).replace("<password>",password);
+    doGet(url_sendSMSCode,function(result){
+        if(result.code==0){
+            doGet(url_resetPassword,function(result){
+                if(result.code==0){
+                    console.log("重设密码成功");
+                }else{
+                    console.log("Error when resetPassword msg="+result.msg);
+                }
+            })
+        }else{
+            console.log("Error when sendSMSCode msg="+result.msg);
+        }
+    });
+}
+
+//批量创建用户
+function createUsersSet(){
+    var baseurl=getBaseUrl();
+    var urltemp_sendSMSCode=baseurl+"app/sendSMSCode?phone=<phone>";
+    var urltemp_userReg=baseurl+"app/userReg?phone=<phone>&name=<name>&smscode=<smscode>&gender=<gender>&password=<password>&idcard=<idcard>"
+
+    for(var i=0;i<users.length;i++){
+        user=users[i];
+        var url_sendSMSCode=urltemp_sendSMSCode.replace("<phone>",user.phone);
+        var url_userReg=urltemp_userReg.replace("<phone>",user.phone).replace("<smscode>","111111").replace("<gender>",user.gender).replace("<password>","111111").replace("<name>",user.name).replace("<idcard>",user.idcard);
+        doGet(url_sendSMSCode,function(result){
+            if(result.code==0){
+                doGet(url_userReg,function(result){
+                    if(result.code==0){
+                        console.log("创建用户成功 phone="+user.phone);
+                    }else{
+                        console.log("Error when userReg msg="+result.msg+" user="+user.phone);
+                    }
+                })
+            }else{
+                console.log("Error when sendSMSCode msg="+result.msg+" user="+user.phone);
+            }
+        });
+    }
+}
+
+
+</script>
+</body>
+</html>

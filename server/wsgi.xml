@@ -1,0 +1,16 @@
+<uwsgi>
+     <socket>127.0.0.1:9090</socket> #与上文nginx配置文件的端口号一致
+     <listen>80</listen>
+     <master>true</master>
+     <pidfile>/var/run/nginx.pid</pidfile> #ngix的id配置文件
+     <processes>8</processes>
+     <pythonpath>/apps/im/</pythonpath> #项目 的路径，需修改
+    <module>wsgi</module>
+     <profiler>true</profiler>
+     <memory-report>true</memory-report>
+     <enable-threads>true</enable-threads>
+     <wsgi-file>/apps/im/im/wsgi.py</wsgi-file> #django自动生成的wsgi.py路径
+    <logdate>true</logdate>
+    <limit-as>6048</limit-as>
+ <daemonize>/apps/logs/im_uwsgi.log</daemonize> #刚刚创建的log目录的路径
+</uwsgi>

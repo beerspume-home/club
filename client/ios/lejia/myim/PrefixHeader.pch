@@ -1,0 +1,258 @@
+//
+//  PrefixHeader.pch
+//  myim
+//
+//  Created by Sean Shi on 15/10/14.
+//  Copyright © 2015年 车友会. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <Debug.h>
+#import <Utility+Date.h>
+#import <UIView+JE.h>
+
+#import "AController+IM.h"
+#import "Utility+IM.h"
+#import "Models.h"
+#import "Storage+IM.h"
+#import "Remote.h"
+#import "VC.h"
+#import "HeaderView.h"
+#import "MenuView.h"
+#import "DatePicker.h"
+#import "LoadingView.h"
+#import "UIUtility.h"
+#import "StarView.h"
+#import "FeatureItem.h"
+#import "RCIMDelegate.h"
+#import "Cache.h"
+#import <UIImageView+WebCache.h>
+
+//融云自定义消息
+#import "JEAppointmentMessage.h"
+
+//收到新消息时触发系统消息事件
+#define NSNOTIFICATIONCENTER_KEY_UNREADMESSAGE @"NSNOTIFICATIONCENTER_KEY_UNREADMESSAGE"
+
+#define CORNERRADIUS_BUTTON 5.0
+#define HEIGHT_BUTTON 38.0
+#define HEIGHT_HEAD_DEFAULT 64
+#define HEIGHT_HEAD_ITEM_DEFAULT HEIGHT_HEAD_DEFAULT-20
+
+#define FEATURE_NORMAL_HEIGHT 43
+#define BUTTON_DEFAULT_ENGE 15
+
+/** 缺省背景颜色*/
+#define COLOR_UI_BG UIColorFromRGB(0xFFFFFF)                    //缺省背景颜色
+/** 按钮背景颜色*/
+#define COLOR_BUTTON_BG UIColorFromRGB(0x397fa0)                //按钮背景颜色
+/** 按钮文字颜色*/
+#define COLOR_BUTTON_TEXT UIColorFromRGB(0xFFFFFF)              //按钮文字颜色
+/** 正常文字颜色*/
+#define COLOR_TEXT_NORMAL UIColorFromRGB(0x000000)              //正常文字颜色
+/** 次要文字颜色*/
+#define COLOR_TEXT_SECONDARY UIColorFromRGB(0x767676)           //次要文字颜色
+/** 可以点击的文字颜色*/
+#define COLOR_TEXT_LINK UIColorFromRGB(0x000000)                //可以点击的文字颜色（废弃0x3ABAFF）
+/** 高亮的文字颜色*/
+#define COLOR_TEXT_HIGHLIGHT UIColorFromRGB(0x3ABAFF)           //高亮的文字颜色
+/** 高亮的文字颜色-浅*/
+#define COLOR_TEXT_HIGHLIGHT_LIGHT UIColorFromRGB(0xbce7ff)     //高亮的文字颜色-浅
+
+/** 标题栏背景颜色*/
+#define COLOR_HEADER_BG UIColorFromRGB(0x004065)                //标题栏背景颜色
+/** 标题栏文字颜色*/
+#define COLOR_HEADER_TEXT UIColorFromRGB(0xFFFFFF)              //标题栏文字颜色
+/** 分割线颜色*/
+#define COLOR_SPLIT UIColorFromRGB(0xC9C9C9)                    //分割线颜色
+/** 表格分段部分背景色*/
+#define COLOR_TABLE_SECTION_BG UIColorFromRGB(0xebebeb)         //表格分段部分背景色
+/** 表格分段部分文字色*/
+#define COLOR_TABLE_SECTION_TEXT UIColorFromRGB(0x888888)       //表格分段部分文字色
+/** 功能横条背景色*/
+#define COLOR_FEATURE_BAR_BG [UIColor whiteColor]               //功能横条背景色
+/** 主界面TabBar图标选中颜色*/
+#define COLOR_TABBAR_TINTCOLOR UIColorFromRGB(0x45c01a)         //主界面TabBar图标选中颜色
+/** 菜单背景颜色*/
+#define COLOR_MENU_BG UIColorFromRGB(0x004065)                  //菜单背景颜色
+/** 菜单项分割线颜色*/
+#define COLOR_MENU_SPLIT UIColorFromRGB(0x668ca3)               //菜单项分割线颜色
+/** 菜单项文字颜色*/
+#define COLOR_MENU_TEXT UIColorFromRGB(0xFFFFFF)                //菜单项文字颜色
+/** 警告颜色，用于“删除图标”，“警示按钮”*/
+#define COLOR_WRAN [UIColor redColor]                           //警告颜色，用于“删除图标”，“警示按钮”
+/** 错误文字颜色*/
+#define COLOR_MESSAGE_ERROR_TEXT UIColorFromRGB(0xFFFFFF)       //错误文字颜色
+/** 错误背景颜色*/
+#define COLOR_MESSAGE_ERROR_BG UIColorFromRGB(0xfd5776)         //错误背景颜色
+/** 消息文字颜色*/
+#define COLOR_MESSAGE_TEXT UIColorFromRGB(0xFFFFFF)             //消息文字颜色
+/** 消息背景颜色*/
+#define COLOR_MESSAGE_BG UIColorFromRGB(0x95a7bf)               //消息背景颜色
+
+#define FONT_BUTTON [UIFont systemFontOfSize:16.0]
+#define FONT_TEXT_NORMAL [UIFont systemFontOfSize:14.0]
+#define FONT_TEXT_SECONDARY [UIFont systemFontOfSize:12.0]
+#define FONT_HEAD_TITLE [UIFont systemFontOfSize:16.0]
+
+#define EDGEINSETS_DEFAULT UIEdgeInsetsMake(5, 5, 5, 5)
+
+//页面间数据传递Key
+/** 个人信息对象*/
+#define PAGE_PARAM_PERSON @"PAGE_PARAM_PERSON"                  //个人信息对象
+/** 个人ID*/
+#define PAGE_PARAM_PERSONID @"PAGE_PARAM_PERSONID"              //个人ID
+/** 图像*/
+#define PAGE_PARAM_IMAGE @"PAGE_PARAM_IMAGE"                    //图像
+/** URL字符串*/
+#define PAGE_PARAM_URL @"PAGE_PARAM_URL"                        //URL字符串
+/** 文字*/
+#define PAGE_PARAM_TEXT @"PAGE_PARAM_TEXT"                      //文字
+/** 索引值*/
+#define PAGE_PARAM_INDEX @"PAGE_PARAM_INDEX"                    //索引值
+/** 群组*/
+#define PAGE_PARAM_GROUP @"PAGE_PARAM_GROUP"                    //群组
+/** 群组ID*/
+#define PAGE_PARAM_GROUPID @"PAGE_PARAM_GROUPID"                //群组ID
+/** 一组个人信息对象*/
+#define PAGE_PARAM_PEOPLE @"PAGE_PARAM_PEOPLE"                  //一组个人信息对象
+
+/**未签约的身份数据（dic，仅包含身份名称和驾校model）*/
+#define PAGE_PARAM_UNCERTIFY @"PAGE_PARAM_UNCERTIFY"
+
+
+/** 学员对象*/
+#define PAGE_PARAM_STUDENT @"PAGE_PARAM_STUDENT"                //学员对象
+/** 学员ID*/
+#define PAGE_PARAM_STUDENT_ID @"PAGE_PARAM_STUDENT_ID"          //学员ID
+/** 学员对象集合*/
+#define PAGE_PARAM_STUDENT_SET @"PAGE_PARAM_STUDENT_SET"        //学员对象集合
+/** 教练对象*/
+#define PAGE_PARAM_TEACHER @"PAGE_PARAM_TEACHER"                //教练对象
+/** 教练ID*/
+#define PAGE_PARAM_TEACHER_ID @"PAGE_PARAM_TEACHER_ID"          //教练ID
+/** 教练对象集合*/
+#define PAGE_PARAM_TEACHER_SET @"PAGE_PARAM_TEACHER_SET"        //教练对象集合
+/** 客服对象*/
+#define PAGE_PARAM_CUSTOMERSERVICE @"PAGE_PARAM_CUSTOMERSERVICE"//客服对象
+/** 客服对象集合*/
+#define PAGE_PARAM_CUSTOMERSERVICE_SET @"PAGE_PARAM_CUSTOMERSERVICE_SET"//客服对象集合
+/** 运营对象*/
+#define PAGE_PARAM_OPERATION @"PAGE_PARAM_OPERATION"            //运营对象
+/** 运营对象集合*/
+#define PAGE_PARAM_OPERATION_SET @"PAGE_PARAM_OPERATION_SET"    //运营对象集合
+/** 身份类型*/
+#define PAGE_PARAM_CHARACTERTYPE @"PAGE_PARAM_CHARACTERTYPE"    //身份类型
+/** 身份对象集合*/
+#define PAGE_PARAM_CHARACTER_SET @"PAGE_PARAM_CHARACTER_SET"    //身份对象集合
+/** 身份ID*/
+#define PAGE_PARAM_CHARACTER_ID @"PAGE_PARAM_CHARACTER_ID"      //身份ID
+/** 地区对象*/
+#define PAGE_PARAM_AREA @"PAGE_PARAM_AREA"                      //地区对象
+/** 驾校对象*/
+#define PAGE_PARAM_SCHOOL @"PAGE_PARAM_SCHOOL"                  //驾校对象
+/** 驾校ID*/
+#define PAGE_PARAM_SCHOOL_ID @"PAGE_PARAM_SCHOOL_ID"            //驾校ID
+/** 驾校集合*/
+#define PAGE_PARAM_SCHOOL_SET @"PAGE_PARAM_SCHOOL_SET"          //驾校集合
+/** 驾校班级*/
+#define PAGE_PARAM_SCHOOLCLASS @"PAGE_PARAM_SCHOOLCLASS"        //驾校班级
+/** 学员报名申请*/
+#define PAGE_PARAM_SCHOOL_SIGNUP @"PAGE_PARAM_SCHOOL_SIGNUP"    //学员报名申请
+/** 分页-Start*/
+#define PAGE_PARAM_START @"PAGE_PARAM_START"                    //分页-Start
+/** 分页-Offset*/
+#define PAGE_PARAM_OFFSET @"PAGE_PARAM_OFFSET"                  //分页-Offset
+/** 标识搜索关键字*/
+#define PAGE_PARAM_SEARCHKEY @"PAGE_PARAM_SEARCHKEY"            //标识搜索关键字
+/** 教练课表课程对象*/
+#define PAGE_PARAM_COURSE @"PAGE_PARAM_COURSE"                  //教练课表课程对象
+/** 教练课表ID*/
+#define PAGE_PARAM_COURSE_CALENDAR_ID @"PAGE_PARAM_COURSE_CALENDAR_ID"      //教练课表ID
+/** 0:周一 1:周二 2:周三 3:周四 4:周五 5:周六 6:周日*/
+#define PAGE_PARAM_WEEKDAY @"PAGE_PARAM_WEEKDAY"                //0:周一 1:周二 2:周三 3:周四 4:周五 5:周六 6:周日
+
+/** 约车记录对象*/
+#define PAGE_PARAM_APPOINTMENT    @"PAGE_PARAM_APPOINTMENT"     //约车记录对象
+/** 约车记录ID*/
+#define PAGE_PARAM_APPOINTMENT_ID @"PAGE_PARAM_APPOINTMENT_ID"  //约车记录ID
+
+/** 标题*/
+#define PAGE_PARAM_TITLE @"PAGE_PARAM_TITLE"                    //标题
+/** 说明文字*/
+#define PAGE_PARAM_EXPLAIN @"PAGE_PARAM_EXPLAIN"                //说明文字
+/** 输入框说明*/
+#define PAGE_PARAM_PLACEHOLDER @"PAGE_PARAM_PLACEHOLDER"        //输入框说明
+/** 初始值*/
+#define PAGE_PARAM_ORIGIN_VALUE @"PAGE_PARAM_ORIGIN_VALUE"      //初始值
+/** 返回值*/
+#define PAGE_PARAM_RETURN_VALUE @"PAGE_PARAM_RETURN_VALUE"      //返回值
+/** 类型*/
+#define PAGE_PARAM_TYPE @"PAGE_PARAM_TYPE"                      //类型
+/** 字典名称*/
+#define PAGE_PARAM_DICTNAME @"PAGE_PARAM_DICTNAME"              //字典名称
+/** 多选或单选*/
+#define PAGE_PARAM_MUTILSELECT @"PAGE_PARAM_MUTILSELECT"        //多选或单选
+
+/** 页面返回到的ViewController类*/
+#define PAGE_PARAM_BACK_CLASS @"PAGE_PARAM_BACK_CLASS"          //页面返回到的ViewController类
+/** 页面继续前进到的ViewController类*/
+#define PAGE_PARAM_FORWARD_CLASS @"PAGE_PARAM_FORWARD_CLASS"    //页面继续前进到的ViewController类
+/** 输入框类型*/
+#define PAGE_PARAM_INPUTTYPE @"PAGE_PARAM_INPUTTYPE"            //输入框类型
+/** 数据*/
+#define PAGE_PARAM_DATA @"PAGE_PARAM_DATA"                      //数据
+/** 编辑模式*/
+#define PAGE_PARAM_EDIT @"PAGE_PARAM_EDIT"                      //编辑模式
+/** 日期*/
+#define PAGE_PARAM_DATE @"PAGE_PARAM_DATE"                      //日期
+
+#define PAGE_PARAM_DELEGATE @"PAGE_PARAM_DELEGATE"            
+
+
+//学员状态字典
+#define DICT_STUDENT_STUDY_STATUS @[\
+[Dict initWithDictionary:@{\
+                           @"name":@"study_status",\
+                           @"value":@"signup",\
+                           @"desc":@"刚刚报名",\
+                           @"order":@"1",\
+                           }],\
+[Dict initWithDictionary:@{\
+                           @"name":@"study_status",\
+                           @"value":@"km1",\
+                           @"desc":@"理论学习(科目一)",\
+                           @"order":@"2",\
+                           }],\
+[Dict initWithDictionary:@{\
+                           @"name":@"study_status",\
+                           @"value":@"km2",\
+                           @"desc":@"场内驾驶(科目二)",\
+                           @"order":@"3",\
+                           }],\
+[Dict initWithDictionary:@{\
+                           @"name":@"study_status",\
+                           @"value":@"km3a",\
+                           @"desc":@"路考(科目三)",\
+                           @"order":@"4",\
+                           }],\
+[Dict initWithDictionary:@{\
+                           @"name":@"study_status",\
+                           @"value":@"km3b",\
+                           @"desc":@"安全文明驾驶常识(科目四)",\
+                           @"order":@"5",\
+                           }],\
+[Dict initWithDictionary:@{\
+                           @"name":@"study_status",\
+                           @"value":@"done",\
+                           @"desc":@"已取得驾照",\
+                           @"order":@"6",\
+                           }],\
+]\
+
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,25 @@
+{
+  "name": "BaseLib",
+  "version": "1.0.5",
+  "summary": "Base Utility and other tools and feature for ios app in JoyfulEngin.com.",
+  "description": "This Lib include some features for easyer to devepoer iso app.\nIt's a collection of a lot of kinds functions. Please read the annotation of the code.",
+  "homepage": "http://www.joyfulengine.com/",
+  "license": "MIT",
+  "authors": {
+    "Sean Shi": "beerspume@163.com"
+  },
+  "source": {
+    "git": "gitserver:/gitroot/Pods/BaseLib.git",
+    "tag": "1.0.5"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "BaseLib": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

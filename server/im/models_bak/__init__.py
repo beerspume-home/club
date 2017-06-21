@@ -1,0 +1,20 @@
+#coding=utf-8
+from commons import *                       #公共内容（方法，类型，枚举等）
+from dictionary import *                    #字典表
+from area import *                          #地区
+from person import *                        #自然人
+from auth import *                          #自然人密码及授权信息
+from social import *                        #自然人社交信息
+from rongcloud import *                     #自然人对应的融云数据信息
+from smscode import *                       #手机短信验证码
+from contactbook import *                   #自然人的通讯录
+from contacts import *                      #通讯录成员
+from chatgroup import *                     #聊天组
+from chatgroupmember import *               #聊天组成员
+from school import *                        #驾校
+from custormerservice import *              #角色-客服
+from operation import *                     #角色-运营
+from teacher import *                       #角色-教练
+from student import *                       #角色-学员
+from account import *                       #自然人账户
+from voucher import *                       #交易凭证

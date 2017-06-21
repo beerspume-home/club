@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ChangeAreaVC tableView:numberOfRowsInSection:]:ChangeAreaVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FeaturesVC reloadFeaturesButton]:FeaturesVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_me">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Storage(IM) getAllArea]:Storage+IM.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[Network requestUrlAsJson:parameters:]:Storage.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FeatureItem reloadView]:FeatureItem.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SchoolMPListVC tableView:cellForRowAtIndexPath:]:SchoolMPListVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "school">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeGenderVC genItemInSuperView:top:title:height:rightObj:target:action:showSplit:]:ChangeGenderVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SchoolSignupVC putValue:byKey:]:SchoolSignupVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainVC viewDidLoad]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_header.bottom">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelectDictDataVC ok]:SelectDictDataVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "__46+[Remote loginWithUsername:password:callback:]_block_invoke:Remote.m">
+      </ContextState>
+      <ContextState
+         contextName = "__40+[Remote operationCertificate:callback:]_block_invoke:Remote.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "param">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__30+[Remote contactsWithCallbak:]_block_invoke:Remote.m">
+      </ContextState>
+      <ContextState
+         contextName = "__46+[Remote isFriendBetweenMe:andOther:callback:]_block_invoke:Remote.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "a">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Area subarea]:Models.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeAreaVC tableView:didSelectRowAtIndexPath:]:ChangeAreaVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "__32+[Remote updatePerson:callback:]_block_invoke:Remote.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "param">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TrainingAppointmentTeacherCourseCalendarVC reloadDayContent:]:TrainingAppointmentTeacherCourseCalendarVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_courseViewList[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__37-[FindFriendResultVC viewWillAppear:]_block_invoke:FindFriendResultVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TrainingAppointmentTeacherCourseVC featureItem:didValueChange:]:TrainingAppointmentTeacherCourseVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "__23-[CreateChatGroupVC ok]_block_invoke:CreateChatGroupVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "callback_data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UIImage(JE) imageInRect:]:UIView+JE.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeAreaVC reloadView]:ChangeAreaVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_allArea">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeValueVC reloadView]:ChangeValueVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FeatureItem changeValue:]:FeatureItem.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_rightDict">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TrainingAppointmentTeacherCourseVC partEndTimeDictWithIndexSet:]:TrainingAppointmentTeacherCourseVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RCCVC viewDidLoad]:CVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.pluginBoardView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ContactVC tableView:viewForHeaderInSection:]:ContactVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_contacts_all">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelectDictDataVC reloadView]:SelectDictDataVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ImagePicker showWithSourceType:backViewControllerClass:returnKey:]:UIUtility.m">
+      </ContextState>
+      <ContextState
+         contextName = "__25+[Remote updateAreaData:]_block_invoke:Remote.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[HeaderView layoutSubviews]:HeaderView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_leftBarItem.customView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TrainingAppointmentTeacherCourseVC reloadView]:TrainingAppointmentTeacherCourseVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[CreateCharGroupVC viewWillAppear:]_block_invoke:CreateCharGroupVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[Storage(IM) setLoginInfo:]:Storage+IM.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SelectDictDataVC refreshData]:SelectDictDataVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "__30+[Storage(IM) updateCharacter]_block_invoke:Storage+IM.m">
+      </ContextState>
+      <ContextState
+         contextName = "__38-[OperationSubmitCertificateVC submit]_block_invoke:OperationSubmitCertificateVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeAreaVC showSubArea:toParentTableView:]:ChangeAreaVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeAreaVC viewDidLoad]:ChangeAreaVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_allArea">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__61+[Remote updateTeacherCourse:calendarid:courseList:callback:]_block_invoke:Remote.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "courseList[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Storage(IM) getLoginInfo]:Storage+IM.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[ChangeCharacterVC choiceOperation]_block_invoke:ChangeCharacterVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MeVC viewDidLoad]:MeVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TrainingAppointmentShowInfoVC refreshView]:TrainingAppointmentShowInfoVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_canEdit">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MeVC viewWillAppear:]:MeVC.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

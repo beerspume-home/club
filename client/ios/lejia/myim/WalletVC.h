@@ -1,0 +1,12 @@
+//
+//  WalletVC.h
+//  myim
+//
+//  Created by Sean Shi on 15/10/31.
+//  Copyright © 2015年 车友会. All rights reserved.
+//
+
+
+@interface WalletVC : AController
+
+@end
